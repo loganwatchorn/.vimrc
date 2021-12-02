@@ -30,7 +30,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " Appearance
-if strftime("%H") < 5 || 16 < strftime("%H")
+if strftime("%H") < $DAY_START || $DAY_END < strftime("%H")
   colorscheme onehalfdark
 else
   colorscheme onehalflight
@@ -42,7 +42,7 @@ set colorcolumn=81
 let g:python_highlight_all=1
 
 " Behaviour
-set scrolloff=15 "keep 25 lines below and above cursor
+set scrolloff=25 "keep 25 lines below and above cursor
 
 " Languages
 syntax enable
